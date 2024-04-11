@@ -26,7 +26,7 @@ jobs:
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY_DB: assigment-dev-mysql
-          IMAGE_TAG_DB: v3.0
+          IMAGE_TAG_DB: v5.0
         run: |
           ls -ltra
           cd docker
@@ -49,7 +49,7 @@ jobs:
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY_APP: assigment-dev-app
-          IMAGE_TAG_APP: v4.0
+          IMAGE_TAG_APP: v3.0
           DBHOST: ${{ secrets.DBHOST }}
           DBPORT: ${{ secrets.DBPORT }}
           DBUSER: ${{ secrets.DBUSER }}
@@ -83,7 +83,7 @@ jobs:
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY_APP: assigment-dev-app
-          IMAGE_TAG_APP: v4.0
+          IMAGE_TAG_APP: v3.0
           DBHOST: ${{ secrets.DBHOST }}
           DBPORT: ${{ secrets.DBPORT }}
           DBUSER: ${{ secrets.DBUSER }}
@@ -111,4 +111,4 @@ jobs:
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY_APP: assigment-dev-app
-          IMAGE_TAG_APP: v4.0
+          IMAGE_TAG_APP: v3.0
